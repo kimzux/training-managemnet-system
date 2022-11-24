@@ -63,6 +63,7 @@
                           <button class="ml-4 btn btn-danger" type="submit" onclick="return confirm('Are you sure  you want to delete?')">Delete</button>
                           <?= csrf_field() ?>
                         </form>
+                        <a href="{{ route('training.show', $trainings->id) }}" class="ml-4 btn btn-success">View attendees</a>
                       </div>
                     </td>
 

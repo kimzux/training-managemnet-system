@@ -28,10 +28,9 @@ class HomeController extends Controller
     public function index()
     {
         abort_if(Auth::user()->cannot('view dashboard'), 403, 'Access Denied');
-        $attendee = Attendee::count();
         $question = Questionasked::count();
         $training = Train::count();
         $trainer = Trainer::count();
-        return view('home', compact('attendee','question','training','trainer'));
+        return view('home', compact('question','training','trainer'));
     }
 }

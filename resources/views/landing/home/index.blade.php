@@ -11,12 +11,12 @@
           <div class="row">
             <div class="col-lg-6 align-self-center">
               <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <h2>Our program<em> offers leadership development skills tailored for growth and transformation</em>This<span> highly-interactive program focuses</span>  on empowering and nurturing professionals with tools and coaching relevant to successful career growth and sustainability.</h2>
-                <p class="p-words">network provides the tools, hacks, and strategies that transform a job into a career</p>
+                <h2>Our program<em> offers leadership development skills tailored for growth and transformation.</em>This<span> highly-interactive program focuses</span>  on empowering and nurturing professionals with tools and coaching relevant to successful career growth and sustainability.</h2>
+                <p class="p-words">Our network provides the tools, hacks, and strategies that transform a job into a career</p>
                 <form id="search" action="#" method="GET">
                   <fieldset>
                   <a href="{{route('register.index')}}">
-                 <input type="button" value="click here to register" >
+                 <input type="button" value="Click here to register" >
                  </a>
                   </fieldset>
                 </form>
@@ -38,7 +38,7 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2 styles="font-size:20px">See some questions and answers <em>from</em> &amp; others  <span>attendee said</span></h2>
+            <h2 styles="font-size:20px">Questions &amp; <span>Answers</span></h2>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
                   <li><i class="fa fa-users"></i>{{$training->train_name}}</li>
                   <li><i class="fa fa-folder"></i>Fanisiprogram</li>
                 </ul>
-                <a href="#"><h4>{{$training->title}} &amp; In fanisi program</h4></a>
+                <a href="#"><h4>{{$training->title}} </h4></a>
                 <p>{{$training->description}}...</p>
                 <div class="main-blue-button">
                   <a href="{{ route('timetable.download', $training->id) }}" target="_blank">Download timetable</a>
@@ -144,8 +144,8 @@
       <div class="row">
         <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading">
-            <h2 styles="font-size:20px;">Feel Free To Send Us a Message About Your Needs</h2>
-            <p>Network provides the tools, hacks, and strategies that transform a job into a career</p>
+            <h2 style="font-size:25px;">Feel free to send us a message about your needs</h2>
+            <p>Our network provides the tools, hacks, and strategies that transform a job into a career</p>
             <div class="phone-info">
               <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">+255 744 357 350</a></span></h4>
             </div>

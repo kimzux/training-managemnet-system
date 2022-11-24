@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Train;
+use App\Models\Attendee;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -69,10 +70,14 @@ public function destroy($id)
   return back();
 
 }
-    public function download($id)
-    {
-      
-        $notice = Train::where('id', $id)->firstOrFail();
-        return response()->file(storage_path('app') . DIRECTORY_SEPARATOR . $notice->timetable);
-    }
+
+public function show($train_id )
+{
+    abort_if(Auth::user()->cannot('view attendeetrained'), 403, 'Access Denied');
+
+    $attendee = Attendee::where('train_id', $train_id)->get();
+    return view('attendee.index', compact('attendee', 'train_id'));
+}
+
+   
 }

@@ -31,18 +31,17 @@
                         </div>
                         <div class="form-group">
                             <label>proffesionality</label>
-                            <input type="text" name="proffesionality" class="form-control" id="recipient-name1" value="{{$trainer->proffesionality}}" required>
+                            <input type="text" name="email" class="form-control" id="recipient-name1" value="{{$trainer->email}}" required>
                         </div>
                         <div class="form-group">
-                            <label>Training name</label>
-                            <select class="form-control select2" style="width: 100%;" name="train_id" required>
-                                <option value="">Select Here</option>
-                                @foreach($training as $training)
-                                <option value="{{ $training->id}}">{{ $training->train_name}}</option>
-                                @endforeach
-
-                            </select>
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control" id="recipient-name1" value="{{$trainer->title}}" required>
                         </div>
+                        <div class="form-group">
+                            <label>Organization</label>
+                            <input type="text" name="organization" class="form-control" id="recipient-name1" value="{{$trainer->organization}}" required>
+                        </div>
+                        
 
                         <button type="submit" class="btn btn-info"><i class="fa fa-check"></i>update </button>
                 </div>

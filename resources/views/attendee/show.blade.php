@@ -30,7 +30,7 @@
                     <div class="card card-primary card-outline">
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="../customstyles/dist/img/avatar.png" alt="User profile picture">
+                                <img class="profile-user-img img-fluid img-circle" src="/custom/assets/images/avatar.png" alt="User profile picture">
                             </div>
 
                             <h3 class="profile-username text-center">{{$attendee->name}}</h3>
@@ -97,7 +97,7 @@
                                     <!-- Post -->
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="../customstyles/dist/img/avatar.png" alt="user image">
+                                            <img class="img-circle img-bordered-sm" src="/custom/assets/images/avatar.png" alt="user image">
                                             <span class="username">
                                                 <a href="">{{$attendee->name}}.</a>
                                                 <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -113,7 +113,7 @@
 
                                     <div class="post clearfix">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="../customstyles/dist/img/avatar.png" alt="User Image">
+                                            <img class="img-circle img-bordered-sm" src="/custom/assets/images/avatar.png" alt="User Image">
                                             <span class="username">
                                                 <a href="#">{{$attendee->name}}</a>
                                                 <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -131,7 +131,7 @@
                                     <!-- Post -->
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="../customstyles/dist/img/avatar.png" alt="User Image">
+                                            <img class="img-circle img-bordered-sm" src="/custom/assets/images/avatar.png" alt="User Image">
                                             <span class="username">
                                                 <a href="#">{{$attendee->name}}</a>
                                                 <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="../customstyles/dist/img/avatar.png" alt="User Image">
+                                            <img class="img-circle img-bordered-sm" src="/custom/assets/images/avatar.png" alt="User Image">
                                             <span class="username">
                                                 <a href="#">{{$attendee->name}}</a>
                                                 <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>

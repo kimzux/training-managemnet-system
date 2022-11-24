@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
@@ -39,7 +38,7 @@ class RoleController extends Controller
         ]);
 
         Role::create(['name' => $request->name]);
-
+        Alert::success('Success!', 'Successfully added');
         return back();
     }
 

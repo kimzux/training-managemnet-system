@@ -129,14 +129,7 @@
               </li> 
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="{{route('attendee.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-             Attendees
-              </p>
-            </a>
-            </li>
+          
             <li class="nav-item">
             <a href="#" class="nav-link">
             <i class="nav-icon fa fa-tasks"></i>

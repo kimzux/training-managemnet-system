@@ -12,7 +12,7 @@ class LandingController extends Controller
 
     $questions= Questionasked::with('answertrainer')->get();
 
-    $training = Train::where('id', 1)->firstorFail();
+    $training = Train::where('id', 2)->firstorFail();
     return view('landing.home.index', compact('training','questions'));
   }
   public function download($id)
@@ -22,4 +22,5 @@ class LandingController extends Controller
         return response()->file(storage_path('app') . DIRECTORY_SEPARATOR .$timetable->file_url);
        
     }
+    
 }

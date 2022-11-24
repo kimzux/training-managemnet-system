@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="https://thinkmate.co.tz">thinkmate.co.tz</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://fanisiprogram.com">fanisiprogram.com</a>.</strong>
     All rights reserved.
 
 </footer>

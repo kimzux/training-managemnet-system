@@ -25,7 +25,6 @@ class TrainerController extends Controller
         $trainer = new Trainer();
         $trainer->name = $request->input('name');
         $trainer->email = $request->input('email');
-        $trainer->train_id = $request->input('train_id');
         $trainer->title= $request->input('title');
         $trainer->organization= $request->input('organization');
         $trainer->save();
@@ -47,8 +46,9 @@ class TrainerController extends Controller
    
   $validatedData =  $request->validate([
       'name' => 'required',
-      'proffesionality' => 'required',
-       'train_id'=> 'required',
+      'email' => 'required',
+       'title'=> 'required',
+       'organization'=> 'required',
       
   ]);
   

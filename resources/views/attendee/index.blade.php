@@ -7,7 +7,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>
-                        Attendees
+                    <i class="nav-icon fas fa-users"></i> Attendees
                     </h1>
                 </div>
                 <div class="col-sm-6">
@@ -25,9 +25,10 @@
         </div>
         <br />
         @endif
-        <div class="col-sm-6">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"> search Attendees according to Training</button>
-        </div>
+        <div class="col-12">
+                            <button type="button" class="btn btn-info"><i class="fe fe-plus"></i><a data-toggle="modal" data-target="#loanmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Attendee </a></button>
+
+                        </div>
     </section>
     <section class="content">
         <div class="container-fluid">
@@ -35,7 +36,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">List of Attendee</h3>
+                            <h3 class="card-title">List of Attendees</h3>
                         </div>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
@@ -76,14 +77,8 @@
                                         <div class="d-flex">
                                             <td>
                                                 <div class="d-flex">
-                                                    <!-- <a href="{{ route('attendee.edit', $attendees->id)}}" class="btn btn-primary">Edit</a> -->
-                                                    <a href="{{ route('attendee.show', $attendees->id)}}" class="ml-4 btn btn-success">Details</a>
-                                                    <form action="{{ route('attendee.destroy', $attendees->id)}}" method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button hidden="hidden" class="ml-4 btn btn-danger" type="submit" onclick="return confirm('Are you sure  you want to delete?')">Delete</button>
-                                                        <?= csrf_field() ?>
-                                                    </form>
+                                                    <a href="{{ route('training.attendee.show', [ $attendees->train_id , $attendees->id])}}" class="ml-4 btn btn-success">Details</a>
+                                                    
                                                 </div>
                                             </td>
 
@@ -96,37 +91,111 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="modal-default">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">Search for a training attendees </h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                    <div class="modal fade" id="loanmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel1">Add Participants</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <form role="form" method="post"  action="{{route('training.attendee.store', $train_id)}}" id="btnSubmit" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Name</label>
+                                    <input type="text" name="name" value="" class="form-control col-md-8 amount" id="recipient-name1" required>
                                 </div>
-                                <div class="modal-body">
-                                    <form role="form" method="post" action="" enctype="multipart/form-data">
-                                        <div class="modal-body">
-                                        <label for="message-text" class="control-label">Training name</label>
-                                        <select class="form-control select2bs4" style="width: 100%;" name=""  required>
-                                          <option value="">Select Here</option>
-                                          @foreach($training as $trainings)
-                                         <option value="{{ $trainings->id}}">{{ $trainings->training_name}}</option>
-                                                   @endforeach
-                                                 </select>      
-                                            </div>
+                                <!--                            <div class="form-group row">
+                                <label for="message-text" class="control-label col-md-3">Interest Percentage</label>
+                                <input type="number" name="interest" value="" class="form-control col-md-8" id="recipient-name1" required>
+                            </div>-->
+
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Company</label>
+                                    <input type="text" name="company" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Email</label>
+                                    <input type="email" name="email" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Position</label>
+                                    <input type="text" name="occupation" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Age</label>
+                                    <input type="text" name="age" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Phone number</label>
+                                    <input type="text" name="phone_number" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputGender" class="control-label col-md-3">Are you manage a Team</b></label>
+                                    <div class="col-sm-8">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="team_status" id="inlineRadio1" value="male">
+                                            <label class="form-check-label" for="inlineRadio1"> {{ (old('team') == 'yes') ? 'checked' : '' }} Yes</label>
                                         </div>
-                                        <div class="modal-footer justify-content-between">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">find</button>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="team_status" id="inlineRadio2" value="female">
+                                            <label class="form-check-label" for="inlineRadio2"> {{ (old('team') == 'no') ? 'checked' : '' }} No</label>
                                         </div>
-                                        <?= csrf_field() ?>
-                                    </form>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">How did you find out about the training</label>
+                                    <textarea class="form-control col-md-8 period" placeholder="Leave a comment here" name="info_before" id="floatingTextarea2" style="height: 100px"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Describe your response</label>
+                                    <textarea class="form-control col-md-8 period" name="response_description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">How will the training help you /what are you aspiring to achieve by attending this training </label>
+                                    <textarea class="form-control col-md-8 period" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="info_after"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputGender" class="control-label col-md-3">What time suits you for the class</b></label>
+                                    <div class="col-sm-8">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="time" id="inlineRadio1" value="Saturday 9:00 - 12:00pm">
+                                            <label class="form-check-label" for="inlineRadio1"> {{ (old('time') == 'Evening 5:00 - 8:00pm') ? 'checked' : '' }} Evening 5:00 - 8:00pm</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="time" id="inlineRadio2" value="Saturday 9:00 - 12:00pm">
+                                            <label class="form-check-label" for="inlineRadio2"> {{ (old('time') == 'Saturday 9:00 - 12:00pm') ? 'checked' : '' }} Saturday 9:00 - 12:00pm</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputGender" class="control-label col-md-3">What  mode of learning do you prefer</b></label>
+                                    <div class="col-sm-8">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="learn_mode" id="inlineRadio1" value=" Virtual">
+                                            <label class="form-check-label" for="inlineRadio1"> {{ (old('learn_mode') == ' Virtual') ? 'checked' : '' }} Virtual</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="learn_mode" id="inlineRadio2" value="female">
+                                            <label class="form-check-label" for="inlineRadio2"> {{ (old('learn_mode') == 'Physical') ? 'checked' : '' }} Physical</label>
+                                        </div>
+
+                                    </div>
+                                    <input hidden="hidden" type="text" name="train_id" class="form-control form-control-line" value="{{$train_id}}" minlength="1" required>
                                 </div>
                             </div>
-                        </div>
+                            <div class="modal-footer">
+                                <input type="hidden" name="id" value="">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <?= csrf_field() ?>
+                        </form>
                     </div>
+                </div>
+
 
                 </div>
 
