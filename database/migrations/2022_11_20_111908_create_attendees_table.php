@@ -23,6 +23,7 @@ class CreateAttendeesTable extends Migration
             $table->string('email')->unique();
             $table->string('occupation');
             $table->string('team_status');
+            $table->string('resume');
             $table->text('info_before');
             $table->text('response_description');
             $table->text('info_after');

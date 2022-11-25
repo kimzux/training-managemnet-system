@@ -24,10 +24,8 @@
                 <div class="content">
                     <h2 class="form-h1">FANISI PROGRAM</h2>
                     <span class="content1">"We nurture the growth of mid-level professionals and entrepreneurs”</span>
-                    <span class="content2">
-                        Our program offers leadership development skills tailored for mid-managers.
-                        This highly-program focuses on the development of personal and group
-                        leadership skills and knowledge relevant to successful career growth.
+                    <span class="content2" style="font-weight:700;">
+                    Need to know more? Send us your questions.
                     </span>
                 </div>
                 <hr>

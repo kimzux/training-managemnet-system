@@ -81,17 +81,14 @@
                                                     
                                                 </div>
                                             </td>
-
+                                        </div>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-
-                            <div>
-                            </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="loanmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+             <div class="modal fade" id="loanmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content ">
                         <div class="modal-header">
@@ -128,6 +125,10 @@
                                 <div class="form-group row">
                                     <label for="message-text" class="control-label col-md-3">Phone number</label>
                                     <input type="text" name="phone_number" value="" class="form-control col-md-8 period" id="recipient-name1" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="message-text" class="control-label col-md-3">Resume</label>
+                                    <input type="file" name="resume" value="" class="form-control col-md-8 period" id="recipient-name1" required>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputGender" class="control-label col-md-3">Are you manage a Team</b></label>
@@ -178,7 +179,7 @@
                                             <label class="form-check-label" for="inlineRadio1"> {{ (old('learn_mode') == ' Virtual') ? 'checked' : '' }} Virtual</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="learn_mode" id="inlineRadio2" value="female">
+                                            <input class="form-check-input" type="radio" name="learn_mode" id="inlineRadio2" value="Physical">
                                             <label class="form-check-label" for="inlineRadio2"> {{ (old('learn_mode') == 'Physical') ? 'checked' : '' }} Physical</label>
                                         </div>
 
@@ -202,23 +203,24 @@
             </div>
         </div>
     </section>
-    <script>
-        $(function() {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-    </script>
+</div>
+<script>
+  $(function() {
+    $("#example1").DataTable({
+      "responsive": true,
+      "lengthChange": false,
+      "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
     @endsection

@@ -93,6 +93,27 @@
                        
                 </div>
                 <div class="form-field">
+                @error('file')
+                      <small class="text-danger">{{$message}}</small>
+                      @enderror
+                      <label for="phone_number" class="label">Upload Resume<span class="star">*</span></label>
+                <input type="file" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp"
+                   name="resume"     placeholder="Your answer" required>
+                </div>
+                <div class="form-field">
+                @error('resume')
+                      <small class="text-danger">{{$message}}</small>
+                      @enderror
+                      
+                    <label for="resume" class="label">Choose Cohort<span class="star">*</span></label>
+                    <select class="form-control" id="exampleInputphone" name="train_name" aria-describedby="phoneHelp" required>
+                    <option value="">Select Here</option>
+                      @foreach($training as $trainings)
+                          <option value="{{ $trainings->id}}">{{ $trainings->train_name}}</option>
+                                  @endforeach
+                        </select>
+                </div>
+                <div class="form-field">
                 @error('team_status')
                       <small class="text-danger">{{$message}}</small>
                       @enderror

@@ -2,9 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2022 thinkmate.co.tz . All Rights Reserved. 
-          
-          <br>Design: <a rel="nofollow" href="https://thinkmate.co.tz">Thinkmate company limited</a></p>
+          <p>© Copyright 2022 fanisiprogram . All Rights Reserved. 
         </div>
       </div>
     </div>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Attendee;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Train;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
@@ -9,7 +11,8 @@ class AttendeeController extends Controller
 {
     public function index()
     {
-        return view('landing.attendee.register.index');
+        $training = Train::select('id', 'train_name')->get();
+        return view('landing.attendee.register.index', compact('training'));
     }
     public function attendee_store(Request $request)
     {
@@ -26,11 +29,14 @@ class AttendeeController extends Controller
             'time' => ['required'],
             'phone_number' => ['required'],
             'learn_mode' => ['required'],
+            'resume' => ['required'],
         ]);
+        $path = Storage::putFile('resumes', $request->file('resume'));
 
         $attendee = new Attendee();
         $attendee->train_id = $request->input('train_name');
         $attendee->name = $request->input('name');
+        $attendee->resume = $path;
         $attendee->age = $request->input('age');
         $attendee->phone_number = $request->input('phone_number');
         $attendee->email = $request->input('email');
@@ -42,11 +48,15 @@ class AttendeeController extends Controller
             'response_description'
         );
         $attendee->info_after = $request->input('info_after');
-        $attendee->train_id = 1;
         $attendee->time = $request->input('time');
         $attendee->learn_mode = $request->input('learn_mode');
         $attendee->save();
         Alert::success('Success!', 'Successfully Registered');
         return back();
+    }
+    public function trainingparticipant()
+    {
+        $attendee = Attendee::all();
+        return view('attendee.allpartipant', compact('attendee'));
     }
 }

@@ -36,9 +36,11 @@ Route::prefix('user-management')->group(function () {
 Route::resource('trainer', TrainerController::class);
 Route::resource('training', TrainingController::class);
 Route::resource('training.attendee', AttendeeViewController::class);
+Route::get('/participants', [ App\Http\Controllers\AttendeeController::class, 'trainingparticipant',])->name('participant.index');
 Route::resource('questionview', QuestionViewController::class);
 Route::resource('answer', QuestionAnswersController::class);
 Route::get('file/{id}/download', [App\Http\Controllers\TrainingController::class,'download', ])->name('file.download');
+Route::get('resume/{id}/download', [App\Http\Controllers\AttendeeViewController::class,'downloadResume', ])->name('resume.download');
 });
 
 

@@ -34,9 +34,7 @@ class TrainingController extends Controller
         $training->timetable = $path;
         $training->save();
         Alert::success('Success!', 'Successfully added');
-        return redirect()
-            ->route('training.index');
-           
+        return redirect()->route('training.index');
     }
 
     public function edit(Request $request, $id)
@@ -50,34 +48,41 @@ class TrainingController extends Controller
     public function update(Request $request, $id)
     {
         abort_if(Auth::user()->cannot('update training'), 403, 'Access Denied');
-   
-  $validatedData =  $request->validate([
-      'train_name' => 'required',
-       'timetable'=> 'required',
-      
-  ]);
-  
-  Train::whereId($id)->update($validatedData);
-  Alert::success('Success!', 'Successfully updated');
-  return redirect()->route('training.index');
-}
-public function destroy($id)
-{
-    abort_if(Auth::user()->cannot('delete traning'), 403, 'Access Denied');
-  $training =  Train::findOrFail($id);
-  $training->delete();
-  Alert::success('Success!', 'Successfully deleted');
-  return back();
 
-}
+        $validatedData = $request->validate([
+            'train_name' => 'required',
+            'timetable' => 'required',
+        ]);
 
-public function show($train_id )
-{
-    abort_if(Auth::user()->cannot('view attendeetrained'), 403, 'Access Denied');
+        Train::whereId($id)->update($validatedData);
+        Alert::success('Success!', 'Successfully updated');
+        return redirect()->route('training.index');
+    }
+    public function destroy($id)
+    {
+        abort_if(Auth::user()->cannot('delete traning'), 403, 'Access Denied');
+        $training = Train::findOrFail($id);
+        $training->delete();
+        Alert::success('Success!', 'Successfully deleted');
+        return back();
+    }
 
-    $attendee = Attendee::where('train_id', $train_id)->get();
-    return view('attendee.index', compact('attendee', 'train_id'));
-}
+    public function show($train_id)
+    {
+        abort_if(
+            Auth::user()->cannot('view attendeetrained'),
+            403,
+            'Access Denied'
+        );
 
-   
+        $attendee = Attendee::where('train_id', $train_id)->get();
+        return view('attendee.index', compact('attendee', 'train_id'));
+    }
+    public function download($id)
+    {
+        $timetable = Train::where('id', $id)->firstOrFail();
+
+        return response()->file(
+            storage_path('app') . DIRECTORY_SEPARATOR . $timetable->timetable);
+    }
 }

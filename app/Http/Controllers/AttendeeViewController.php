@@ -5,6 +5,7 @@ use App\Models\Train;
 use App\Models\Attendee;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class AttendeeViewController extends Controller
@@ -13,7 +14,7 @@ class AttendeeViewController extends Controller
     {
         $this->middleware('auth');
     }
-    public function store(Request $request )
+    public function store(Request $request)
     {
         $attendee = new Attendee();
         $attendee->name = $request->input('name');
@@ -27,7 +28,9 @@ class AttendeeViewController extends Controller
         $attendee->response_description = $request->input(
             'response_description'
         );
+        $path = Storage::putFile('resumes', $request->file('resume'));
         $attendee->info_after = $request->input('info_after');
+        $attendee->resume = $path;
         $attendee->train_id = 1;
         $attendee->time = $request->input('time');
         $attendee->learn_mode = $request->input('learn_mode');
@@ -35,7 +38,6 @@ class AttendeeViewController extends Controller
         Alert::success('Success!', 'Successfully Registered');
         return back();
     }
-
 
     public function show($id)
     {
@@ -55,6 +57,14 @@ class AttendeeViewController extends Controller
     //         return $attends->train->contains('name', $data);
     //     });
     //     dd( $attendeewithtraining);
-        
+
     // }
+    public function downloadResume($id)
+    {
+        $resume = Attendee::where('id', $id)->firstOrFail();
+
+        return response()->file(
+            storage_path('app') . DIRECTORY_SEPARATOR . $resume->resume
+        );
+    }
 }

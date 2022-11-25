@@ -30,7 +30,7 @@
               <li class="scroll-to-section"><a href="{{route('register.index')}}">Register</a></li>
               <li class="scroll-to-section"><a href="{{route('question.index')}}">Questions</a></li>
               <li class="scroll-to-section"><a href="#timetable">Timetable</a></li>
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact us</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>

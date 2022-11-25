@@ -19,7 +19,7 @@ class LandingController extends Controller
     {
         $timetable = Train::where('id', $id)->firstOrFail();
     
-        return response()->file(storage_path('app') . DIRECTORY_SEPARATOR .$timetable->file_url);
+        return response()->file(storage_path('app') . DIRECTORY_SEPARATOR .$timetable->timetable);
        
     }
     

@@ -71,6 +71,20 @@ hr {
   padding-left: 40px;
   border: 1px solid rgb(245, 244, 244);
 }
+select {
+  display: block;
+  border-bottom: 3px solid red;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 50px;
+  padding-right: 250px;
+  transition: border-color 300ms;
+}
+select:focus {
+  border-bottom: 3px solid red;
+}
 input,
 label {
   display: block;
@@ -366,6 +380,17 @@ button {
     margin-left: 50px;
     top: 25px;
   }
+  select {
+    display: block;
+    border-bottom: 3px solid red;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 50px;
+    padding-right: 100px;
+    transition: border-color 300ms;
+  }
   textarea {
     background: transparent;
     outline: none;
@@ -431,5 +456,8 @@ button {
 
   .text-danger {
     color: red;
+  }
+  select:focus {
+    border-bottom: 3px solid red;
   }
 }

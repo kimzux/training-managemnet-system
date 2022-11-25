@@ -50,6 +50,9 @@
                                 <li class="list-group-item">
                                     <b>Email</b> <a class="float-right">{{$attendee->email}}</a>
                                 </li>
+                                <li class="list-group-item">
+                                    <b>resume</b> <a class="float-right" href="{{ route('resume.download', $attendee->id) }}" target="_blank">download</a>
+                                </li>
                             </ul>
                         </div>
                         <!-- /.card-body -->

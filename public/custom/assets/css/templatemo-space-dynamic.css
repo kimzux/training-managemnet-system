@@ -34,10 +34,64 @@ font & reset css
 reset
 --------------------------------------------- 
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -68,7 +122,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 
 .clearfix:after {
-  content: ".";
+  content: '.';
   display: block;
   clear: both;
   visibility: hidden;
@@ -88,13 +142,20 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
-ul, li {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-header, nav, section, article, aside, footer, hgroup {
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
   display: block;
 }
 
@@ -102,7 +163,8 @@ header, nav, section, article, aside, footer, hgroup {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   background-color: #fff;
@@ -115,10 +177,14 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0px;
   margin-bottom: 0px;
-
 }
 
 ul {
@@ -158,7 +224,8 @@ body {
 }
 
 @media (max-width: 991px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
   .mobile-top-fix {
@@ -239,26 +306,26 @@ header
 */
 
 .background-header {
-  background-color: #fff!important;
-  height: 80px!important;
-  position: fixed!important;
+  background-color: #fff !important;
+  height: 80px !important;
+  position: fixed !important;
   top: 0px;
   left: 0px;
   right: 0px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #1e1e1e!important;
+  color: #1e1e1e !important;
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #f04f25!important;
+  color: #f04f25 !important;
 }
 
 .background-header .nav li a.active {
-  color: #f04f25!important;
+  color: #f04f25 !important;
 }
 
 .header-area {
@@ -269,10 +336,10 @@ header
   right: 0px;
   z-index: 100;
   height: 100px;
-  -webkit-transition: all .5s ease 0s;
-  -moz-transition: all .5s ease 0s;
-  -o-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .header-area .main-nav {
@@ -295,16 +362,16 @@ header
 }
 
 .header-area .main-nav .logo .img-logo {
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #03a4ed;
-    line-height: 100px;
-    float: left;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #03a4ed;
+  line-height: 100px;
+  float: left;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .logo h4 span {
@@ -314,7 +381,7 @@ header
 .background-header .main-nav .logo {
   line-height: 80px;
 }
-.img-logo{
+.img-logo {
   margin-top: 20px;
 }
 .background-header .main-nav .nav {
@@ -344,7 +411,7 @@ header
   padding-left: 40px;
 }
 
-.header-area .main-nav .nav li:last-child a ,
+.header-area .main-nav .nav li:last-child a,
 .background-header .main-nav .nav li:last-child a {
   color: #fff !important;
   padding: 0px 20px;
@@ -378,18 +445,18 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #f04f25!important;
+  color: #f04f25 !important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #f04f25!important;
+  color: #f04f25 !important;
   opacity: 1;
 }
 
-.header-area .main-nav .nav li:last-child a:hover ,
+.header-area .main-nav .nav li:last-child a:hover,
 .background-header .main-nav .nav li:last-child a:hover {
-  background-color: #03a4ed;
+  background-color: #f04f25;
 }
 
 .header-area .main-nav .nav li.submenu {
@@ -399,7 +466,7 @@ header
 
 .header-area .main-nav .nav li.submenu:after {
   font-family: FontAwesome;
-  content: "\f107";
+  content: '\f107';
   font-size: 12px;
   color: #2a2a2a;
   position: absolute;
@@ -421,7 +488,8 @@ header
   transform: translateY(+2em);
   visibility: hidden;
   z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
 }
 
 .header-area .main-nav .nav li.submenu ul li {
@@ -434,7 +502,7 @@ header
   opacity: 1;
   display: block;
   background: #f7f7f7;
-  color: #2a2a2a!important;
+  color: #2a2a2a !important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
@@ -450,7 +518,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #f04f25!important;
+  color: #f04f25 !important;
   padding-left: 25px;
 }
 
@@ -526,7 +594,7 @@ header
 
 .header-area .main-nav .menu-trigger span:before,
 .header-area .main-nav .menu-trigger span:after {
-  content: "";
+  content: '';
 }
 
 .header-area .main-nav .menu-trigger span {
@@ -604,7 +672,7 @@ header
 }
 
 @media (max-width: 992px) {
-  .header-area .main-nav .nav li:last-child  ,
+  .header-area .main-nav .nav li:last-child,
   .background-header .main-nav .nav li:last-child {
     display: none;
   }
@@ -623,7 +691,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #f04f25!important;
+    color: #f04f25 !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -684,7 +752,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #f04f25!important;
+    color: #f04f25 !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -709,12 +777,13 @@ header
     height: auto !important;
   }
   .header-area .main-nav .nav li.submenu:after {
-    color: #3B566E;
+    color: #3b566e;
     right: 25px;
     font-size: 14px;
     top: 15px;
   }
-  .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+  .header-area .main-nav .nav li.submenu:hover ul,
+  .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
 }
@@ -732,100 +801,98 @@ preloader
 */
 
 .js-preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999;
-    -webkit-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
 .js-preloader.loaded {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 @-webkit-keyframes dot {
-    50% {
-        -webkit-transform: translateX(96px);
-        transform: translateX(96px);
-    }
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
 }
 
 @keyframes dot {
-    50% {
-        -webkit-transform: translateX(96px);
-        transform: translateX(96px);
-    }
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
 }
 
 @-webkit-keyframes dots {
-    50% {
-        -webkit-transform: translateX(-31px);
-        transform: translateX(-31px);
-    }
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
 }
 
 @keyframes dots {
-    50% {
-        -webkit-transform: translateX(-31px);
-        transform: translateX(-31px);
-    }
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
 }
 
 .preloader-inner {
-    position: relative;
-    width: 142px;
-    height: 40px;
-    background: #fff;
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: #fff;
 }
 
 .preloader-inner .dot {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 12px;
-    left: 15px;
-    background: #f04f25;
-    border-radius: 50%;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation: dot 2.8s infinite;
-    animation: dot 2.8s infinite;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #f04f25;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
 }
 
 .preloader-inner .dots {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    margin-top: 12px;
-    margin-left: 31px;
-    -webkit-animation: dots 2.8s infinite;
-    animation: dots 2.8s infinite;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
 }
 
 .preloader-inner .dots span {
-    display: block;
-    float: left;
-    width: 16px;
-    height: 16px;
-    margin-left: 16px;
-    background: #f04f25;
-    border-radius: 50%;
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #f04f25;
+  border-radius: 50%;
 }
-
-
 
 /* 
 ---------------------------------------------
@@ -844,7 +911,6 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  background-image: url(../images/baner-dec-left.png);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -855,7 +921,6 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/baner-dec-right.png);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -878,12 +943,12 @@ Banner Style
 .main-banner .left-content h2 {
   font-size: 25px;
   font-weight: 700;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif !important;
   color: #2a2a2a;
   line-height: 40px;
   text-align: justify;
-  word-spacing:-2px;
-
+  word-spacing: -2px;
 }
 
 .main-banner .left-content h2 em {
@@ -905,7 +970,7 @@ Banner Style
   height: 66px;
   position: relative;
 }
-.p-words{
+.p-words {
   word-spacing: 0px;
   font-size: 13px;
 }
@@ -947,7 +1012,6 @@ Banner Style
 .main-banner .left-content form input:hover {
   background-color: #f04f25;
 }
-
 
 /* 
 ---------------------------------------------
@@ -994,7 +1058,6 @@ About Us Style
 .about-us .services .item p {
   color: #fff;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1063,8 +1126,12 @@ Services Style
 }
 
 .our-services .progress-skill-bar .filled-bar {
-  background: rgb(255,77,30);
-  background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);
+  background: rgb(255, 77, 30);
+  background: linear-gradient(
+    105deg,
+    rgba(255, 77, 30, 1) 0%,
+    rgba(255, 44, 109, 1) 100%
+  );
   height: 6px;
   border-radius: 3px;
   margin-bottom: -6px;
@@ -1083,7 +1150,6 @@ Services Style
 .our-services .third-bar .filled-bar {
   width: 90%;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1121,7 +1187,11 @@ Portfolio
 
 .our-portfolio .hidden-content {
   background: rgb(240, 79, 37);
-  background: linear-gradient(105deg, rgb(240, 79, 37) 0%, rgb(240, 79, 37)100%);
+  background: linear-gradient(
+    105deg,
+    rgb(240, 79, 37) 0%,
+    rgb(240, 79, 37) 100%
+  );
   padding: 30px;
   border-radius: 20px;
   text-align: center;
@@ -1137,13 +1207,17 @@ Portfolio
   width: 20px;
   height: 20px;
   position: absolute;
-  background: rgb(255,77,30);
+  background: rgb(255, 77, 30);
   content: '';
   left: 50%;
   bottom: -8px;
   margin-left: -5px;
   transform: rotate(45deg);
-  background: linear-gradient(105deg, rgba(255,52,69,1) 0%, rgba(255,51,78,1) 100%);
+  background: linear-gradient(
+    105deg,
+    rgba(255, 52, 69, 1) 0%,
+    rgba(255, 51, 78, 1) 100%
+  );
   z-index: -1;
 }
 
@@ -1166,14 +1240,13 @@ Portfolio
   text-align: center;
   padding: 50px;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 }
 
 .our-portfolio .showed-content img {
   max-width: 100px;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1189,7 +1262,10 @@ Blog
 
 .our-blog .section-heading h2 {
   margin-right: 180px;
-  font-size: 17px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif !important;
+  font-size: 23px;
+  font-weight: 700;
 }
 
 .our-blog .top-dec {
@@ -1207,7 +1283,7 @@ Blog
 
 .our-blog .left-image img {
   border-radius: 20px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .our-blog .left-image .info {
@@ -1216,7 +1292,7 @@ Blog
 
 .our-blog .left-image .info .inner-content {
   background-color: #fff;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-right: 75px;
   position: absolute;
@@ -1284,16 +1360,16 @@ Blog
 .our-blog .right-list .left-content h4 {
   font-size: 20px;
   font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif !important;
   color: #2a2a2a;
   margin: 20px 0px 15px 0px;
 }
-
 
 .our-blog .right-list .right-image img {
   width: 250px;
   border-radius: 20px;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1303,7 +1379,6 @@ contact
 
 .contact-us {
   padding: 160px 0px;
-  background-image: url(../images/contact-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1312,11 +1387,14 @@ contact
 .contact-us .section-heading h2,
 .contact-us .section-heading h2 em,
 .contact-us .section-heading h2 span {
-  color: #fff;
+  color: #191a20;
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif !important;
 }
 
 .contact-us .section-heading p {
-  color: #fff;
+  color: #191a20;
   margin-top: 30px;
 }
 
@@ -1327,7 +1405,8 @@ contact
 .phone-info h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  margin-top: 10px;
+  color: #191a20;
 }
 
 .phone-info h4 span i {
@@ -1336,18 +1415,18 @@ contact
   display: inline-block;
   text-align: center;
   line-height: 46px;
-  background-color: #fff;
+  background-color: #f04f25;
   border-radius: 50%;
-  color: #f04f25;
+  color: #fff;
   font-size: 22px;
   margin-left: 30px;
   margin-right: 15px;
 }
 
 .phone-info h4 span a {
-  color: #fff;
+  color: #191a20;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 form#contact .contact-dec {
@@ -1372,18 +1451,18 @@ form#contact input {
   width: 100%;
   height: 46px;
   border-radius: 33px;
-  background-color: #d1f3ff;
+  background-color: #f04f25;
   border: none;
   outline: none;
   font-size: 15px;
   font-weight: 300;
-  color: #2a2a2a;
+  color: #fff;
   padding: 0px 20px;
   margin-bottom: 20px;
 }
 
 form#contact input::placeholder {
-  color: #2a2a2a;
+  color: #fff;
 }
 
 form#contact textarea {
@@ -1394,23 +1473,23 @@ form#contact textarea {
   min-height: 140px;
   height: 140px;
   border-radius: 20px;
-  background-color: #d1f3ff;
+  background-color: #f04f25;
   border: none;
   outline: none;
   font-size: 15px;
   font-weight: 300;
-  color: #2a2a2a;
+  color: #fff;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 
 form#contact textarea::placeholder {
-  color: #2a2a2a;
+  color: #fff;
 }
 
 form#contact button {
   display: inline-block;
-  background-color: #03a4ed;
+  background-color:  #f04f25;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -1420,13 +1499,12 @@ form#contact button {
   letter-spacing: 0.25px;
   border: none;
   outline: none;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 form#contact button:hover {
   background-color: #f04f25;
 }
-
 
 /* 
 ---------------------------------------------
@@ -1470,7 +1548,7 @@ responsive
   }
   .main-banner .left-content form,
   .main-banner .left-content form input {
-    width: 100%!important;
+    width: 100% !important;
   }
   #about {
     margin-top: 0px;
@@ -1489,9 +1567,13 @@ responsive
   .about-us .services {
     text-align: center;
   }
-  .about-us .services .item  {
+  .about-us .services .item {
     background: rgb(240, 79, 37);
-    background: linear-gradient(105deg, rgb(240, 79, 37) 0%, rgb(240, 79, 37) 100%);
+    background: linear-gradient(
+      105deg,
+      rgb(240, 79, 37) 0%,
+      rgb(240, 79, 37) 100%
+    );
     padding: 30px;
     border-radius: 20px;
     display: inline-block;
@@ -1549,7 +1631,7 @@ responsive
   }
   form#contact {
     margin-left: 0px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
   form#contact .contact-dec {
     display: none;

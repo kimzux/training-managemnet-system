@@ -11,8 +11,7 @@
           <div class="row">
             <div class="col-lg-6 align-self-center">
               <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <h2>Our program<em> offers leadership development skills tailored for growth and transformation.</em>This<span> highly-interactive program focuses</span>  on empowering and nurturing professionals with tools and coaching relevant to successful career growth and sustainability.</h2>
-                <p class="p-words">Our network provides the tools, hacks, and strategies that transform a job into a career</p>
+                <h2>Our program<em> offers leadership development skills tailored for growth and transformation.</em>This<span> highly-interactive program focuses</span>  on empowering and nurturing professionals with tools and coaching relevant to successful career.</h2>
                 <form id="search" action="#" method="GET">
                   <fieldset>
                   <a href="{{route('register.index')}}">
@@ -24,7 +23,7 @@
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="/custom/assets/images/img.jpg" alt="team meeting">
+                <img src="/custom/assets/images/pic3.jpeg" alt="team meeting" style="border-radius:8px;">
               </div>
             </div>
           </div>
@@ -72,11 +71,11 @@
       <div class="row">
         <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
           <div class="section-heading">
-            <h2>Check Out Our schedule <em>for next</em> coming<span> Training</span></h2>
+            <h2>Refer to our schedule <em> for</em> further <span> details</span></h2>
           </div>
         </div>
         <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-         
+
         </div>
       </div>
       <div class="row">
@@ -109,17 +108,17 @@
                   <p>Personal branding through your digital identity...</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/custom/assets/images/blog1.jpg" alt=""></a>
+                  <a href="#"><img src="/custom/assets/images/brand.jpeg" alt=""></a>
                 </div>
               </li>
               <li>
                 <div class="left-content align-self-center">
                   <span><i class="fa fa-calendar"></i> 12 April 2022</span>
-                  <a href="#"><h4>Building  &amp; self-awareness</h4></a>
+                  <a href="#"><h4>Building self-awareness</h4></a>
                   <p>Building self-awareness through emotional intelligence...</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/custom/assets/images/blog2.jpg" alt=""></a>
+                  <a href="#"><img src="/custom/assets/images/pic2.jpeg" alt=""></a>
                 </div>
               </li>
               <li>
@@ -129,7 +128,7 @@
                   <p>Time management – psychology and techniques...</p>
                 </div>
                 <div class="right-image">
-                  <a href="#"><img src="/custom/assets/images/blog3.jpg" alt=""></a>
+                  <a href="#"><img src="/custom/assets/images/time.jpeg" alt=""></a>
                 </div>
               </li>
             </ul>
@@ -142,12 +141,13 @@
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <div class="section-heading">
-            <h2 style="font-size:25px;">Feel free to send us a message about your needs</h2>
-            <p>Our network provides the tools, hacks, and strategies that transform a job into a career</p>
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s" >
+          <div class="section-heading" style="margin-bottom:80px;">
+            <h2>Let's get in touch, by follow us on social media</h2>
             <div class="phone-info">
-              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">+255 744 357 350</a></span></h4>
+              <h4><span> <a href="https://www.linkedin.com/company/fanisi-program/"><i class="fa fa-linkedin"></i>Linkedin: @fanisiprogram</a></span></h4>
+              <h4><span> <a href="https://www.facebook.com/FanisiProgram/posts/475147204396186"><i class="fa fa-facebook"></i>Facebook: @fanisiprogram</a></span></h4>
+              <h4><span> <a href="https://www.instagram.com/p/Ch1djeUNj_e/?igshid=NWQ4MGE5ZTk="><i class="fa fa-instagram"></i>Instagram: @fanisiprogram</a></span></h4>
             </div>
           </div>
         </div>
